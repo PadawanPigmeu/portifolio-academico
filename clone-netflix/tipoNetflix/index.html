@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fastflix</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h1 class="logo">Fastflix</h1>
+            <p>Escolha o perfil para continuar</p>
+        </div>
+        <!-- Botão para alternar entre dark e light mode -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Alternar entre modo claro e escuro">
+            🌙
+        </button>
+    </header>
+    <main>
+        <h2>QUEM ESTÁ ASSISTINDO?</h2>
+        <!-- Lista não ordenada de perfis para seleção -->
+        <ul class="profiles" aria-label="Seleção de perfis">
+            <!-- Cada perfil é um item de lista com figura e legenda -->
+            <li class="profile">
+                <a href="catalogo/catalogo.html" aria-label="Selecionar perfil de Joana">
+                    <figure>
+                        <img src="/assets/Perfil_1.jpg" alt="Avatar de um cartoon estilo anos 60, um cachorro humanizado fazendo pose sorridente e utilizando uma boina">
+                        <figcaption>Joana</figcaption>
+                    </figure>
+                </a>
+            </li>
+
+            <li class="profile">
+                <a href="catalogo/catalogo.html" aria-label="Selecionar perfil de Carlos">
+                    <figure>
+                        <img src="/assets/Perfil_2.jpg" alt="Avatar de um homem no estilo Tim Burton, misturando elementos como elixires em uma casa macabra">
+                        <figcaption>Carlos</figcaption>
+                    </figure>
+                </a>
+            </li>
+
+            <li class="profile">
+                <a href="catalogo/catalogo.html" aria-label="Selecionar perfil de Miguel">
+                    <figure>
+                        <img src="/assets/Perfil_3.jpg" alt="Anakin vs Obi-Wan, em um plano fechado, ambos com expressões de raiva e tensão.">
+                        <figcaption>Miguel</figcaption>
+                    </figure>
+                </a>
+            </li>
+            
+            <li class="profile">
+                <a href="catalogo/catalogo.html" aria-label="Selecionar perfil de Bruninha">
+                    <figure>
+                        <img src="/assets/Perfil_4.jpg" alt="Aurora Boreal no céu estrelado, pinheiros e montanhas nevadas">
+                        <figcaption>Bruninha</figcaption>
+                    </figure>
+                </a>
+            </li>
+        </ul>
+    </main>
+    <!-- Script para armazenar perfil ativo no localStorage -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const profileLinks = document.querySelectorAll('.profile a');
+            const storageNameKey = 'perfilAtivoNome';
+            const storageImageKey = 'perfilAtivoImagem';
+
+            profileLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+
+                    const figcaption = this.querySelector('figcaption');
+                    const img = this.querySelector('img');
+
+                    if (figcaption && img) {
+                        const profileName = figcaption.textContent.trim();
+                        const profileImage = img.src;
+
+                        localStorage.setItem(storageNameKey, profileName);
+                        localStorage.setItem(storageImageKey, profileImage);
+                    }
+
+                    window.location.href = this.href;
+                });
+            });
+        });
+    </script>
+    <!-- Script para gerenciar dark/light mode -->
+    <script src="theme.js"></script>
+</body>
+</html>
