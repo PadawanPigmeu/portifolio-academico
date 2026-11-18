@@ -14,11 +14,11 @@ Repositório reunindo projetos práticos desenvolvidos durante a graduação em 
 * **Conceitos aplicados:** Alocação dinâmica de memória (`realloc`/`free`), modularização (`.c`/`.h`), persistência de dados em arquivos de texto, exclusão lógica e ordenação alfabética.
 * **Tecnologias:** Linguagem C.
 
-### 3. Clone da Interface Netflix (`/clone-netflix`)
-* **Descrição:** Recriação responsiva da interface principal da plataforma Netflix, desenvolvida durante imersão prática da Alura.
-* **Conceitos aplicados:** Estruturação semântica, estilização responsiva, carrossel interativo de títulos e organização de layout moderno.
+### 3. Projetos Front-End — Formação Alura (`/projetos-frontend-alura`)
+* **Descrição:** Conjunto de páginas web desenvolvidas durante cursos práticos de desenvolvimento front-end da Alura, incluindo uma recriação responsiva da interface da Netflix (`/clone-netflix`) e uma landing page comercial para catálogo e venda de produtos de beleza (`/pagina-produtos-beleza`).
+* **Conceitos aplicados:** Estruturação semântica em HTML5, estilização e posicionamento com CSS3 (Flexbox/Grid), design responsivo e interatividade básica com JavaScript.
 * **Tecnologias:** HTML5, CSS3, JavaScript.
-
+  
 ### 4. Projeto Hackathon (`/hackathon`)
 * **Descrição:** Solução desenvolvida em equipe sob tempo limitado para resolução de problema prático com foco em análise de dados e visualização.
 * **Tecnologias:** Python.
