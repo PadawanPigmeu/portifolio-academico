@@ -1,0 +1,15 @@
+# Zap Mineiro (CLI em C)
+
+Protótipo em linha de comando inspirado na estrutura de gerenciamento de usuários e grupos de um aplicativo de mensagens.
+
+**Nota sobre a interface:** As mensagens e interações no terminal foram escritas intencionalmente em dialeto coloquial mineiro como uma proposta criativa e bem-humorada para tornar a experiência em linha de comando mais descontraída, mantendo todo o rigor técnico na arquitetura do código.
+
+## Arquitetura e Recursos
+* **Modularização:** Separação clara de responsabilidades entre `Oquerrr.c` (menu principal), `Pessoas.c/.h` e `Grupos.c/.h`.
+* **Gerenciamento de Memória:** Alocação e redimensionamento dinâmico (`realloc` e `free`).
+* **Persistência e Lógica:** Armazenamento em arquivos `.txt`, exclusão lógica via flags de validação e ordenação alfabética manual.
+
+## Como compilar e executar
+```bash
+gcc Oquerrr.c Pessoas.c Grupos.c -o zap_mineiro
+./zap_mineiro
